@@ -2,7 +2,7 @@
 cd /tmp/rom
 
 . build/envsetup.sh
-lunch nad_juice-userdebug
+lunch lineage_X00TD-userdebug
 export CCACHE_DIR=/tmp/ccache
 export CCACHE_EXEC=$(which ccache)
 export USE_CCACHE=1
