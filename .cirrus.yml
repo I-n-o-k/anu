@@ -43,18 +43,12 @@ task:
       - repo init -q --no-repo-verify --depth=1 -u https://github.com/NusantaraProject-ROM/android_manifest -b 11 -g default,-device,-mips,-darwin,-notdefault
       - repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
       # DT/VT/KT/TC
-      - git clone --depth=1 https://github.com/I-n-o-k/device_xiaomi_juice -b anu device/xiaomi/juice
-      - git clone --depth=1 https://gitlab.com/I-n-o-k/vendor-lime --single-branch -b 11ABT vendor/xiaomi/juice
-      - git clone --depth=1 https://github.com/I-n-o-k/android_kernel_xiaomi_bengal --single-branch -b 11.0 kernel/xiaomi/juice
+      - git clone --depth=1 https://github.com/aslenofarid/device_asus_X00TD -b lineage-17.1 device/asus/X00TD
+      - git clone --depth=1 https://github.com/aslenofarid/device_asus_sdm660-common -b lineage-17.1 device/asus/sdm660-common
+      - git clone --depth=1 https://github.com/aslenofarid/proprietary_vendor_asus -b lineage-17.1 vendor/asus
+      - git clone --depth=1 https://github.com/aslenofarid/kernel_asus_sdm660 -b master kernel/asus/sdm660
       # HALS
-      - rm -rf hardware/qcom-caf/sm8250/audio
-      - rm -rf hardware/qcom-caf/sm8250/display
-      - rm -rf hardware/qcom-caf/sm8250/media
-      - rm -rf external/json-c
-      - git clone --depth=1 https://github.com/I-n-o-k/hardware_qcom-caf_sm8250_audio hardware/qcom-caf/sm8250/audio
-      - git clone --depth=1 https://github.com/I-n-o-k/hardware_qcom-caf_sm8250_display hardware/qcom-caf/sm8250/display
-      - git clone --depth=1 https://github.com/I-n-o-k/hardware_qcom-caf_sm8250_media hardware/qcom-caf/sm8250/media
-      - git clone --depth=1 https://github.com/LineageOS/android_external_json-c -b lineage-18.1 external/json-c
+
       - curl -s https://api.telegram.org/$tokentl/sendMessage -d chat_id=$idtl -d text="Sync Completed!"
       - echo "============================"
       - echo "Sync Completed!"
