@@ -13,4 +13,3 @@ brunch X00TD -j8 &
 sleep 90m
 kill %1
 ccache -s
-
