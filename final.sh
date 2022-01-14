@@ -10,4 +10,4 @@ ccache -z
 
 . build/envsetup.sh
 lunch lineage_X00TD-userdebug
-mka nad -j8
+brunch X00TD -j8
