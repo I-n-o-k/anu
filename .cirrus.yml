@@ -11,7 +11,7 @@ task:
   timeout_in: 480m  
   container:
       image: inok2341/anu:latest
-      cpu: 20
+      cpu: 8
       memory: 32G
         
   Build-Env-Setup_background_script:
@@ -33,6 +33,8 @@ task:
       - df -h
       - lsblk
       - ls -l -a -h
+      - apt-get update && apt-get install -y tmux
+      - tmux new -s foo -d && tmux ls
   
   Sync_script:
       - echo "============================"
